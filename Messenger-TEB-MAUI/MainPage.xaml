@@ -1,9 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Messenger_TEB_MAUI.MainPage"
+              xmlns:local="clr-namespace:Messenger_TEB_MAUI.Converters"
+              x:Class="Messenger_TEB_MAUI.MainPage"
              Background="White"
 >
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:BoolToColorConverter x:Key="BoolToColorConverter" />
+            <local:BoolToHorizontalOptionsConverter x:Key="BoolToHorizontalOptionsConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
     <Grid RowDefinitions="Auto, *" ColumnDefinitions="2*, 3*">
         <!-- Pierwsza kolumna -->
@@ -12,13 +20,17 @@
                 <Label Text="Czaty" FontSize="Large" TextColor="Black"/>
                 <Frame BorderColor="#168AFF" CornerRadius="2" Padding="0" Margin="0,0,0,10" BackgroundColor="White">
                     <VerticalStackLayout Padding="8">
-                        <CollectionView x:Name="ChatList" ItemsSource="{Binding ChatItems}">
+                        <CollectionView x:Name="ChatList" ItemsSource="{Binding ChatItems}" SelectionChanged="OnChatSelected">
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
                                     <Grid>
                                         <HorizontalStackLayout Margin="0,0,0,10">
                                             <Frame CornerRadius="50" WidthRequest="100" HeightRequest="100" Padding="0" IsClippedToBounds="True" BorderColor="White">
-                                                <Image Source="{Binding ImageLink}" WidthRequest="100" HeightRequest="100" Aspect="AspectFill" />
+                                                <Image Source="{Binding ImageLink}" WidthRequest="100" HeightRequest="100" Aspect="AspectFill">
+                                                    <Image.GestureRecognizers>
+                                                        <TapGestureRecognizer Tapped="OnImageTapped" />
+                                                    </Image.GestureRecognizers>
+                                                </Image>
                                             </Frame>
                                             <VerticalStackLayout VerticalOptions="Center">
                                                 <Label Text="{Binding Name}" FontSize="Large" TextColor="Black"/>
@@ -39,31 +51,19 @@
             <Frame BorderColor="#168AFF" CornerRadius="2" Padding="0" Margin="0,0,0,10" BackgroundColor="White" HeightRequest="833">
                 <Grid RowDefinitions="*, Auto">
                     <ScrollView Grid.Row="0">
-                        <VerticalStackLayout>
-                            <Label Text="Jan Postulski" TextColor="Black" Margin="20,5"/>
-                            <Frame BackgroundColor="#9F33FF" CornerRadius="16" Padding="16" HorizontalOptions="Start" Margin="12,0,12,12" BorderColor="White">
-                                <Label Text="Siema, gdzie jesteś? Czekam na Ciebie pod Twoim blokiem." TextColor="White" />
-                            </Frame>
-                            <Label Text="Ty" TextColor="Black" HorizontalOptions="End" Margin="20,0,20,12"/>
-                            <Frame BackgroundColor="#168AFF" CornerRadius="16" Padding="16" Margin="12,0,12,12" HorizontalOptions="End" BorderColor="White">
-                                <Label Text="Poczekaj chwilę, jeszcze muszę skończyć projekt, który mam do oddania." TextColor="White" />
-                            </Frame>
-                            <Label Text="Jan Postulski" TextColor="Black"  Margin="20,5"/>
-                            <Frame BackgroundColor="#9F33FF" CornerRadius="16" Padding="16" HorizontalOptions="Start" Margin="12,0,12,12" BorderColor="White">
-                                <Label Text="Długo Ci to zajmie?" TextColor="White" />
-                            </Frame>
-                            <Label Text="Ty" TextColor="Black" HorizontalOptions="End" Margin="12,0,20,12"/>
-                            <Frame BackgroundColor="#168AFF" CornerRadius="16" Padding="16" Margin="12,0,12,12" HorizontalOptions="End" BorderColor="White">
-                                <Label Text="Jeszcze tak z  15minut." TextColor="White" />
-                            </Frame>
-                            <Label Text="Jan Postulski" TextColor="Black"  Margin="20,5"/>
-                            <Frame BackgroundColor="#9F33FF" CornerRadius="16" Padding="16" HorizontalOptions="Start" Margin="12,0,12,12" BorderColor="White">
-                                <Label Text="Dobra, tylko byleby nie dłużej!" TextColor="White" />
-                            </Frame>
-                            <Label Text="Ty" TextColor="Black" HorizontalOptions="End" Margin="12,0,20,12"/>
-                            <Frame BackgroundColor="#168AFF" CornerRadius="16" Padding="16" Margin="12,0,12,12" HorizontalOptions="End" BorderColor="White">
-                                <Label Text="Dobra dobra..." TextColor="White" />
-                            </Frame>
+                        <VerticalStackLayout x:Name="ChatView">
+                            <Label Text="{Binding Name}" TextColor="Black" Margin="20,5"/>
+                            <CollectionView ItemsSource="{Binding Messages}">
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <VerticalStackLayout>
+                                            <Frame BackgroundColor="{Binding IsSentByUser, Converter={StaticResource BoolToColorConverter}}" CornerRadius="16" Padding="16" Margin="12,0,12,12" HorizontalOptions="{Binding IsSentByUser, Converter={StaticResource BoolToHorizontalOptionsConverter}}" BorderColor="White">
+                                                <Label Text="{Binding Text}" TextColor="White" />
+                                            </Frame>
+                                        </VerticalStackLayout>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
                         </VerticalStackLayout>
                     </ScrollView>
                     <Frame Background="White" Margin="5" Padding="5" CornerRadius="0" Grid.Row="1">
