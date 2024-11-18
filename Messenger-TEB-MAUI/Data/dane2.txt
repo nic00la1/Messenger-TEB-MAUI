@@ -1,10 +1,10 @@
-Id = 1, Name = "Jan Postulski", Description = "Kawa to moje ¿ycie", ImageLink = "osoba1.jpg"
+Id = 1, Name = "Jan Postulski", Description = "Kawa to moje zycie", ImageLink = "osoba1.jpg"
 Id = 2, Name = "Alicja Bystra", Description = "<brak opisu>", ImageLink = "osoba2.jpg"
-Id = 3, Name = "Adrianna Nowak", Description = "Przyroda to ciê¿ki przedmiot", ImageLink = "osoba3.jpg"
-Id = 4, Name = "Gra¿yna £uk", Description = "¯ycie mnie mnie", ImageLink = "osoba4.jpg"
-Id = 5, Name = "Krystian B³¹d", Description = "Life is fun", ImageLink = "osoba5.jpg"
-Id = 6, Name = "Adrian Jañczyk", Description = "Droga do sukcesu nie jest prosta", ImageLink = "osoba6.jpg"
-Id = 7, Name = "Michaœ Kowalczyk", Description = "Gry to moja specjalnoœæ", ImageLink = "osoba7.jpg"
+Id = 3, Name = "Adrianna Nowak", Description = "Przyroda to ciezki przedmiot", ImageLink = "osoba3.jpg"
+Id = 4, Name = "Grazyna Luk", Description = "Zycie mnie mnie", ImageLink = "osoba4.jpg"
+Id = 5, Name = "Krystian Blad", Description = "Life is fun", ImageLink = "osoba5.jpg"
+Id = 6, Name = "Adrian Janczyk", Description = "Droga do sukcesu nie jest prosta", ImageLink = "osoba6.jpg"
+Id = 7, Name = "Michas Kowalczyk", Description = "Gry to moja specjalnosc", ImageLink = "osoba7.jpg"
 
 Wiadomoœci czatu:
 
