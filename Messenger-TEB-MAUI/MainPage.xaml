@@ -36,41 +36,43 @@
 
         <!-- Druga kolumna -->
         <VerticalStackLayout Grid.Column="1" Padding="10">
-            <Frame BorderColor="#168AFF" CornerRadius="2" Padding="0" Margin="0,0,0,10" BackgroundColor="White">
-                <ScrollView>
-                    <VerticalStackLayout>
-                        <Label Text="Jan Postulski" TextColor="Black" Margin="20,5"/>
-                        <Frame BackgroundColor="#9F33FF" CornerRadius="16" Padding="16" HorizontalOptions="Start" Margin="12,0,12,12" BorderColor="White">
-                            <Label Text="Siema, gdzie jesteś? Czekam na Ciebie pod Twoim blokiem." TextColor="White" />
-                        </Frame>
-                        <Label Text="Ty" TextColor="Black" HorizontalOptions="End" Margin="20,0,20,12"/>
-                        <Frame BackgroundColor="#168AFF" CornerRadius="16" Padding="16" Margin="12,0,12,12" HorizontalOptions="End" BorderColor="White">
-                            <Label Text="Poczekaj chwilę, jeszcze muszę skończyć projekt, który mam do oddania." TextColor="White" />
-                        </Frame>
-                        <Label Text="Jan Postulski" TextColor="Black"  Margin="20,5"/>
-                        <Frame BackgroundColor="#9F33FF" CornerRadius="16" Padding="16" HorizontalOptions="Start" Margin="12,0,12,12" BorderColor="White">
-                            <Label Text="Długo Ci to zajmie?" TextColor="White" />
-                        </Frame>
-                        <Label Text="Ty" TextColor="Black" HorizontalOptions="End" Margin="12,0,20,12"/>
-                        <Frame BackgroundColor="#168AFF" CornerRadius="16" Padding="16" Margin="12,0,12,12" HorizontalOptions="End" BorderColor="White">
-                            <Label Text="Jeszcze tak z  15minut." TextColor="White" />
-                        </Frame>
-                        <Label Text="Jan Postulski" TextColor="Black"  Margin="20,5"/>
-                        <Frame BackgroundColor="#9F33FF" CornerRadius="16" Padding="16" HorizontalOptions="Start" Margin="12,0,12,12" BorderColor="White">
-                            <Label Text="Dobra, tylko byleby nie dłużej!" TextColor="White" />
-                        </Frame>
-                        <Label Text="Ty" TextColor="Black" HorizontalOptions="End" Margin="12,0,20,12"/>
-                        <Frame BackgroundColor="#168AFF" CornerRadius="16" Padding="16" Margin="12,0,12,12" HorizontalOptions="End" BorderColor="White">
-                            <Label Text="Dobra dobra..." TextColor="White" />
-                        </Frame>
-                        <Frame Background="White" Margin="5" Padding="5" CornerRadius="0">
-                            <Grid ColumnDefinitions="*, Auto">
-                                <Entry Placeholder="Wpisz wiadomość do przesłania..." Grid.Column="0" />
-                                <Button Text="Wyślij" BackgroundColor="#168AFF" TextColor="White" Grid.Column="1" />
-                            </Grid>
-                        </Frame>
-                    </VerticalStackLayout>
-                </ScrollView>
+            <Frame BorderColor="#168AFF" CornerRadius="2" Padding="0" Margin="0,0,0,10" BackgroundColor="White" HeightRequest="833">
+                <Grid RowDefinitions="*, Auto">
+                    <ScrollView Grid.Row="0">
+                        <VerticalStackLayout>
+                            <Label Text="Jan Postulski" TextColor="Black" Margin="20,5"/>
+                            <Frame BackgroundColor="#9F33FF" CornerRadius="16" Padding="16" HorizontalOptions="Start" Margin="12,0,12,12" BorderColor="White">
+                                <Label Text="Siema, gdzie jesteś? Czekam na Ciebie pod Twoim blokiem." TextColor="White" />
+                            </Frame>
+                            <Label Text="Ty" TextColor="Black" HorizontalOptions="End" Margin="20,0,20,12"/>
+                            <Frame BackgroundColor="#168AFF" CornerRadius="16" Padding="16" Margin="12,0,12,12" HorizontalOptions="End" BorderColor="White">
+                                <Label Text="Poczekaj chwilę, jeszcze muszę skończyć projekt, który mam do oddania." TextColor="White" />
+                            </Frame>
+                            <Label Text="Jan Postulski" TextColor="Black"  Margin="20,5"/>
+                            <Frame BackgroundColor="#9F33FF" CornerRadius="16" Padding="16" HorizontalOptions="Start" Margin="12,0,12,12" BorderColor="White">
+                                <Label Text="Długo Ci to zajmie?" TextColor="White" />
+                            </Frame>
+                            <Label Text="Ty" TextColor="Black" HorizontalOptions="End" Margin="12,0,20,12"/>
+                            <Frame BackgroundColor="#168AFF" CornerRadius="16" Padding="16" Margin="12,0,12,12" HorizontalOptions="End" BorderColor="White">
+                                <Label Text="Jeszcze tak z  15minut." TextColor="White" />
+                            </Frame>
+                            <Label Text="Jan Postulski" TextColor="Black"  Margin="20,5"/>
+                            <Frame BackgroundColor="#9F33FF" CornerRadius="16" Padding="16" HorizontalOptions="Start" Margin="12,0,12,12" BorderColor="White">
+                                <Label Text="Dobra, tylko byleby nie dłużej!" TextColor="White" />
+                            </Frame>
+                            <Label Text="Ty" TextColor="Black" HorizontalOptions="End" Margin="12,0,20,12"/>
+                            <Frame BackgroundColor="#168AFF" CornerRadius="16" Padding="16" Margin="12,0,12,12" HorizontalOptions="End" BorderColor="White">
+                                <Label Text="Dobra dobra..." TextColor="White" />
+                            </Frame>
+                        </VerticalStackLayout>
+                    </ScrollView>
+                    <Frame Background="White" Margin="5" Padding="5" CornerRadius="0" Grid.Row="1">
+                        <Grid ColumnDefinitions="*, Auto">
+                            <Entry Placeholder="Wpisz wiadomość do przesłania..." Grid.Column="0" />
+                            <Button Text="Wyślij" BackgroundColor="#168AFF" TextColor="White" Grid.Column="1" />
+                        </Grid>
+                    </Frame>
+                </Grid>
             </Frame>
         </VerticalStackLayout>
     </Grid>
