@@ -1,0 +1,16 @@
+Id = 1, Name = "Jan Postulski", Description = "Kawa to moje ¿ycie", ImageLink = "osoba1.jpg"
+Id = 2, Name = "Alicja Bystra", Description = "<brak opisu>", ImageLink = "osoba2.jpg"
+Id = 3, Name = "Adrianna Nowak", Description = "Przyroda to ciê¿ki przedmiot", ImageLink = "osoba3.jpg"
+Id = 4, Name = "Gra¿yna £uk", Description = "¯ycie mnie mnie", ImageLink = "osoba4.jpg"
+Id = 5, Name = "Krystian B³¹d", Description = "Life is fun", ImageLink = "osoba5.jpg"
+Id = 6, Name = "Adrian Jañczyk", Description = "Droga do sukcesu nie jest prosta", ImageLink = "osoba6.jpg"
+Id = 7, Name = "Michaœ Kowalczyk", Description = "Gry to moja specjalnoœæ", ImageLink = "osoba7.jpg"
+
+Wiadomoœci czatu:
+
+Jan Postulski: Siema, gdzie jesteœ? Czekam na Ciebie pod Twoim blokiem.
+Ty: Poczekaj chwilê, jeszcze muszê skoñczyæ projekt, który mam do oddania.
+Jan Postulski: D³ugo Ci to zajmie?
+Ty: Jeszcze tak z 15 minut
+Jan Postulski: Dobra, tylko byleby nie d³u¿ej!
+Ty: Dobra dobra...
