@@ -2,13 +2,14 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Messenger_TEB_MAUI.MainPage"
+             Background="White"
 >
 
     <Grid RowDefinitions="Auto, *" ColumnDefinitions="2*, 3*">
         <!-- Pierwsza kolumna -->
         <ScrollView Grid.Column="0">
             <VerticalStackLayout Padding="10">
-                <Label Text="Czaty" FontSize="Large" />
+                <Label Text="Czaty" FontSize="Large" TextColor="Black"/>
                 <CollectionView x:Name="ChatList" ItemsSource="{Binding ChatItems}">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
@@ -16,8 +17,8 @@
                                 <HorizontalStackLayout>
                                     <Image Source="{Binding Image}" WidthRequest="100" HeightRequest="100" Aspect="AspectFill" />
                                     <VerticalStackLayout VerticalOptions="Center">
-                                        <Label Text="{Binding Name}" FontSize="Large" />
-                                        <Label Text="{Binding Description}" />
+                                        <Label Text="{Binding Name}" FontSize="Large" TextColor="Black" />
+                                        <Label Text="{Binding Description}" TextColor="Black"/>
                                     </VerticalStackLayout>
                                 </HorizontalStackLayout>
                             </Frame>
@@ -31,11 +32,29 @@
         <VerticalStackLayout Grid.Column="1" Padding="10">
             <ScrollView>
                 <VerticalStackLayout>
-                    <Frame BackgroundColor="#9F33FF" CornerRadius="16" Padding="16" Margin="12,0,12,12" HorizontalOptions="Start">
-                        <Label Text="Jan Postulski: Cześć, jak się masz?" TextColor="White" />
+                    <Label Text="Jan Postulski" TextColor="Black" Margin="20,5"/>
+                    <Frame BackgroundColor="#9F33FF" CornerRadius="16" Padding="16" HorizontalOptions="Start" Margin="12,0,12,12" BorderColor="White">
+                        <Label Text="Siema, gdzie jesteś? Czekam na Ciebie pod Twoim blokiem." TextColor="White" />
                     </Frame>
-                    <Frame BackgroundColor="#168AFF" CornerRadius="16" Padding="16" Margin="12,0,12,12" HorizontalOptions="End">
-                        <Label Text="Ty: Dobrze, dziękuję!" TextColor="White" />
+                    <Label Text="Ty" TextColor="Black" HorizontalOptions="End" Margin="20,0,20,12"/>
+                    <Frame BackgroundColor="#168AFF" CornerRadius="16" Padding="16" Margin="12,0,12,12" HorizontalOptions="End" BorderColor="White">
+                        <Label Text="Poczekaj chwilę, jeszcze muszę skończyć projekt, który mam do oddania." TextColor="White" />
+                    </Frame>
+                    <Label Text="Jan Postulski" TextColor="Black"  Margin="20,5"/>
+                    <Frame BackgroundColor="#9F33FF" CornerRadius="16" Padding="16" HorizontalOptions="Start" Margin="12,0,12,12" BorderColor="White">
+                        <Label Text="Długo Ci to zajmie?" TextColor="White" />
+                    </Frame>
+                    <Label Text="Ty" TextColor="Black" HorizontalOptions="End" Margin="12,0,20,12"/>
+                    <Frame BackgroundColor="#168AFF" CornerRadius="16" Padding="16" Margin="12,0,12,12" HorizontalOptions="End" BorderColor="White">
+                        <Label Text="Jeszcze tak z  15minut." TextColor="White" />
+                    </Frame>
+                    <Label Text="Jan Postulski" TextColor="Black"  Margin="20,5"/>
+                    <Frame BackgroundColor="#9F33FF" CornerRadius="16" Padding="16" HorizontalOptions="Start" Margin="12,0,12,12" BorderColor="White">
+                        <Label Text="Dobra, tylko byleby nie dłużej!" TextColor="White" />
+                    </Frame>
+                    <Label Text="Ty" TextColor="Black" HorizontalOptions="End" Margin="12,0,20,12"/>
+                    <Frame BackgroundColor="#168AFF" CornerRadius="16" Padding="16" Margin="12,0,12,12" HorizontalOptions="End" BorderColor="White">
+                        <Label Text="Dobra dobra..." TextColor="White" />
                     </Frame>
                 </VerticalStackLayout>
             </ScrollView>
