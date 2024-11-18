@@ -63,10 +63,12 @@
                         <Frame BackgroundColor="#168AFF" CornerRadius="16" Padding="16" Margin="12,0,12,12" HorizontalOptions="End" BorderColor="White">
                             <Label Text="Dobra dobra..." TextColor="White" />
                         </Frame>
-                        <HorizontalStackLayout Padding="10">
-                            <Entry Placeholder="Wpisz wiadomość do przesłania..." HorizontalOptions="FillAndExpand" />
-                            <Button Text="Wyślij" BackgroundColor="#168AFF" TextColor="White" />
-                        </HorizontalStackLayout>
+                        <Frame Background="White" Margin="5" Padding="5" CornerRadius="0">
+                            <Grid ColumnDefinitions="*, Auto">
+                                <Entry Placeholder="Wpisz wiadomość do przesłania..." Grid.Column="0" />
+                                <Button Text="Wyślij" BackgroundColor="#168AFF" TextColor="White" Grid.Column="1" />
+                            </Grid>
+                        </Frame>
                     </VerticalStackLayout>
                 </ScrollView>
             </Frame>
