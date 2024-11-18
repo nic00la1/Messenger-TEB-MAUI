@@ -10,24 +10,27 @@
         <ScrollView Grid.Column="0">
             <VerticalStackLayout Padding="10">
                 <Label Text="Czaty" FontSize="Large" TextColor="Black"/>
-                <CollectionView x:Name="ChatList" ItemsSource="{Binding ChatItems}">
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <Frame BorderColor="#168AFF" CornerRadius="2" Padding="8" Margin="0,0,0,10">
-                                <HorizontalStackLayout>
-                                    <Frame CornerRadius="50" WidthRequest="100" HeightRequest="100" Padding="0" IsClippedToBounds="True">
-                                        <Image Source="{Binding ImageLink}" WidthRequest="100" HeightRequest="100" Aspect="AspectFill" />
-                                    </Frame>
-                                    <VerticalStackLayout VerticalOptions="Center">
-                                        <Label Text="{Binding Name}" FontSize="Large" />
-                                        <Label Text="{Binding Description}" />
-                                    </VerticalStackLayout>
-                                </HorizontalStackLayout>
-                            </Frame>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>
-
+                <Frame BorderColor="#168AFF" CornerRadius="2" Padding="0" Margin="0,0,0,10" BackgroundColor="White">
+                    <VerticalStackLayout Padding="8">
+                        <CollectionView x:Name="ChatList" ItemsSource="{Binding ChatItems}">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <HorizontalStackLayout Margin="0,0,0,10">
+                                            <Frame CornerRadius="50" WidthRequest="100" HeightRequest="100" Padding="0" IsClippedToBounds="True" BorderColor="White">
+                                                <Image Source="{Binding ImageLink}" WidthRequest="100" HeightRequest="100" Aspect="AspectFill" />
+                                            </Frame>
+                                            <VerticalStackLayout VerticalOptions="Center">
+                                                <Label Text="{Binding Name}" FontSize="Large" TextColor="Black"/>
+                                                <Label Text="{Binding Description}" TextColor="Black"/>
+                                            </VerticalStackLayout>
+                                        </HorizontalStackLayout>
+                                    </Grid>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </VerticalStackLayout>
+                </Frame>
             </VerticalStackLayout>
         </ScrollView>
 
