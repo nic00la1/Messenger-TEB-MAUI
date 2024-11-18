@@ -15,7 +15,9 @@
                         <DataTemplate>
                             <Frame BorderColor="#168AFF" CornerRadius="2" Padding="8" Margin="0,0,0,10">
                                 <HorizontalStackLayout>
-                                    <Image Source="{Binding ImageLink}" WidthRequest="100" HeightRequest="100" Aspect="AspectFill" />
+                                    <Frame CornerRadius="50" WidthRequest="100" HeightRequest="100" Padding="0" IsClippedToBounds="True">
+                                        <Image Source="{Binding ImageLink}" WidthRequest="100" HeightRequest="100" Aspect="AspectFill" />
+                                    </Frame>
                                     <VerticalStackLayout VerticalOptions="Center">
                                         <Label Text="{Binding Name}" FontSize="Large" />
                                         <Label Text="{Binding Description}" />

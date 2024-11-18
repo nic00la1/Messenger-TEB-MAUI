@@ -12,7 +12,7 @@ namespace Messenger_TEB_MAUI.Services
         public static List<Person> LoadPersons(string filePath)
         {
             var persons = new List<Person>();
-            var lines = File.ReadAllLines(filePath);
+            var lines = File.ReadAllLines(filePath, Encoding.Default);
 
             foreach (var line in lines)
             {

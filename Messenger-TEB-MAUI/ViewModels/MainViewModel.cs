@@ -27,7 +27,7 @@ namespace Messenger_TEB_MAUI.ViewModels
 
         public MainViewModel()
         {
-            var filePath = @"C:\Users\admin\source\repos\Messenger-TEB-MAUI\Messenger-TEB-MAUI\Data\dane.txt";
+            var filePath = @"C:\Users\admin\source\repos\Messenger-TEB-MAUI\Messenger-TEB-MAUI\Data\dane2.txt";
             ChatItems = DataServices.LoadPersons(filePath);
         }
     }
